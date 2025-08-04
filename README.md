@@ -13,7 +13,6 @@ I used the Netflix Movies and TV Shows dataset from [Kaggle](https://www.kaggle.
 
 What I Did:
 As a beginner, I followed simple but important steps to clean the data:
-
 - Checked for missing values
 - Filled missing data in:
   - `director` → with `'Unknown'`
@@ -23,6 +22,13 @@ As a beginner, I followed simple but important steps to clean the data:
 - Removed duplicate rows
 - Renamed column headers to lowercase and used underscores (for consistency)
 - Saved the cleaned dataset as a new CSV file
+
+Challenges Faced
+- I got an error when trying to read the CSV file before uploading it in Google Colab.
+- Faced a warning while using `inplace=True` with `fillna()` – I fixed it by using direct assignment.
+- Had trouble converting the `date_added` column to date format because of missing or wrong values, so I used `errors='coerce'`.
+- Didn't notice duplicate rows at first, but found and removed them using `drop_duplicates()`.
+- Some column names had spaces and capital letters, so I cleaned them to make them lowercase with underscores.
 
 Files in this Project
 - `task1.ipynb` – My notebook with all the Python code
